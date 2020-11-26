@@ -1,0 +1,30 @@
+<div class="card justify-content-center">
+    <div class="card-header">
+        <h4>{{pageTitle}}</h4>
+    </div>
+    <div class="card-body bg-warning">
+        <div class="row justify-content-center">
+            <!-- <input #animal type="text" placeholder="Animal name">
+            <button class="btn btn-success" type="button" (click)='displayImage(animal.value)'>Display</button> -->
+            <div class="dropdown">
+                <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Select Animal
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" value="tiger" type="button" #animal1 (click)="displayImage(animal1.value)">tiger</button>
+                  <button class="dropdown-item" value="lion" type="button" #animal2 (click)="displayImage(animal2.value)">lion</button>
+                  <button class="dropdown-item" value="deer" type="button" #animal3 (click)="displayImage(animal3.value)">deer</button>
+                  <button class="dropdown-item" value="peacock" type="button" #animal4 (click)="displayImage(animal4.value)">peacock</button>
+                  <button class="dropdown-item" value="giraffe" type="button" #animal5 (click)="displayImage(animal5.value)">giraffe</button>
+                  <button class="dropdown-item" value="rabbit" type="button" #animal6 (click)="displayImage(animal6.value)">rabbit</button>
+                </div>
+              </div>
+        </div>
+        <br><br><br>
+        <div class="row justify-content-center" *ngIf="imageName">
+            <img src="assets/images/{{imageName}}" class="img-fluid"
+            style="width:300px;height:300px;" alt="Animal">
+        </div>
+        
+    </div>
+</div>
